@@ -1,5 +1,5 @@
 //
-//  first-person.swift
+//  second-person.swift
 //  intro-card
 //
 //  Created by mohmmed adel on 25/07/2023.
@@ -7,30 +7,31 @@
 
 import SwiftUI
 
-struct first_person: View {
+struct second_person: View {
     var body: some View {
         
         ZStack {
-            
-            LinearGradient(gradient:Gradient(colors:  [.blue , .red ]), startPoint: .topTrailing, endPoint: .bottomLeading)
+        
+            LinearGradient(gradient:Gradient(colors:  [.blue , .red ]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .frame(height: 1000)
 
             
             VStack{
                 HStack{
-                    Text("🔥")
+                    Text("😸")
                         .font(.system(size : 100))
                         
-                    Text("mohammed adeeeeeeeel !")
+                    Text("adel mohameeeeed !")
                         .bold()
-                    Text("🔥")
+                        .multilineTextAlignment(.center)
+                    Text("😸")
                         .font(.system(size : 100))
                 }
-                Image("duck")
+                Image("cat")
                     .resizable()
-                    .frame(width:150 , height:150)
+                    .frame(width:200 , height:150)
                     .cornerRadius(100)
-                Text("What did the detective duck say to his partner? Let's quack this case 🕵️‍♂️🦆😄 ")
+                Text("Why was the cat sitting on the computer? To keep an eye on the mouse! 😸😄")
                     .bold()
                     .multilineTextAlignment(.center)
                 
@@ -42,7 +43,7 @@ struct first_person: View {
                         .background(.green)
                         .cornerRadius(10)
                     
-                    Link("Github" , destination:URL(string: "https://www.github.com")!)
+                    Link("youtube" , destination:URL(string: "https://www.youtube.com")!)
                         .font(.system(size : 30))
                         .padding(5)
                         .background(.yellow)
@@ -54,12 +55,13 @@ struct first_person: View {
                 
             }
         }
+
         
     }
 }
 
-struct first_person_Previews: PreviewProvider {
+struct second_person_Previews: PreviewProvider {
     static var previews: some View {
-        first_person()
+        second_person()
     }
 }

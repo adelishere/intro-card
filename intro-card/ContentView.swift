@@ -9,15 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            TabView{
-                first_person()
-                    .tabItem{
-                        Label("person 1" , systemImage: "person.circle")
-                    }
+        ZStack {
+            
+            LinearGradient(gradient:Gradient(colors:  [.blue , .red ]), startPoint: .topTrailing, endPoint: .bottomLeading)
+                .frame(height: 900)
+
+            
+            VStack {
+                TabView{
+                    first_person()
+                        .tabItem{
+                            Label("person 1" , systemImage: "person.circle")
+                            
+                        }
+                    
+                    second_person()
+                        .tabItem{
+                            Label("person 2" , systemImage: "person.circle")
+                        }
+                }
             }
+            .padding()
         }
-        .padding()
     }
 }
 
